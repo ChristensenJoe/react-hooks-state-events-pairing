@@ -1,7 +1,7 @@
 
-function HideComments() {
+function HideComments({isHidden, onHideComments}) {
     return (
-        <button>Hide Comments</button>
+        <button onClick={onHideComments}>{isHidden ? "Show Comments" : "Hide Comments"}</button>
     );
 }
 

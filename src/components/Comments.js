@@ -1,8 +1,10 @@
 import Comment from './Comment'
 
-function Comments({ comments }){
-  return (
-    <div>
+function Comments({ comments, isHidden }){
+
+  const allComments = (
+    (
+      <div>
      <h1>{`${comments.length} Comments`}</h1>
       {comments.map((comment) => {
         return (
@@ -10,6 +12,13 @@ function Comments({ comments }){
        )
       })}
     </div>
+    )
+  );
+
+  return (
+    <>
+    {isHidden ? null : allComments}
+    </>
   )
 }
 

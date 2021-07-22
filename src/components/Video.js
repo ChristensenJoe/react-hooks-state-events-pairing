@@ -4,8 +4,8 @@ function Video({ url }){
     width="919"
     height="525"
     src={url}
-    frameborder="0"
-    allowfullscreen
+    frameBorder="0"
+    allowFullScreen
     title="Thinking in React"
   />
   )

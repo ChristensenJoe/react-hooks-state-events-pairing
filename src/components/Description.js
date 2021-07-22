@@ -2,7 +2,7 @@ import Header from "./Header";
 import LikeButtons from "./LikeButtons";
 import HideComments from "./HideComments";
 
-function Description({video}) {
+function Description({video, onHideComments, isHidden}) {
     return (
         <>
             <Header 
@@ -15,7 +15,10 @@ function Description({video}) {
           dislikes={video.downvotes}
           />
           <br />
-          <HideComments />
+          <HideComments 
+          onHideComments={onHideComments}
+          isHidden={isHidden}
+          />
         </>
     );
 }
